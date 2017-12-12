@@ -17,11 +17,7 @@ module Openvas
         end
       end
 
-      result = Nokogiri::XML(send_receive(content.to_xml))
-
-      unless result.at_css('authenticate_response')[:status].eql?('200')
-        raise AuthenticateError result.at_css('authenticate_response')[:status_text]
-      end
+      query(content)
 
       true
     end
