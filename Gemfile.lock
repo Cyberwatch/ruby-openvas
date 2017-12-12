@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    openvas (0.1.0)
+    openvas (0.2.0)
       nokogiri (~> 1.8)
 
 GEM
