@@ -4,6 +4,7 @@ require 'openvas/version'
 
 require 'openvas/config'
 require 'openvas/client'
+require 'openvas/auth'
 
 module Openvas
   extend self
