@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Cyberwatch/ruby-openvas.svg?branch=master)](https://travis-ci.org/Cyberwatch/ruby-openvas)
 [![Coverage Status](https://coveralls.io/repos/github/Cyberwatch/ruby-openvas/badge.svg?branch=master)](https://coveralls.io/github/Cyberwatch/ruby-openvas?branch=master)
+[![Gem Version](https://badge.fury.io/rb/openvas.svg)](https://badge.fury.io/rb/openvas)
 
 A ruby client for OpenVas API OMP 7.0.
 

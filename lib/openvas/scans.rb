@@ -18,7 +18,7 @@ module Openvas
   end
 
   class Scan
-    attr_accessor :id, :name, :comment, :status, :target, :created_at, :updated_at
+    attr_accessor :id, :name, :comment, :status, :target, :user, :created_at, :updated_at
 
     def initialize(scan)
       @id = scan.at_xpath('@id').value

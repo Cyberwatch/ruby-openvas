@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<get_tasks_response status="200" status_text="OK">
+  <apply_overrides>0</apply_overrides>
+  <task id="96625625-8e22-4b1c-9c65-4ddf80f78d20">
+    <owner>
+      <name>admin</name>
+    </owner>
+    <name>shellshock_01</name>
+    <comment/>
+    <creation_time>2017-12-11T16:40:16Z</creation_time>
+    <modification_time>2017-12-12T08:13:44Z</modification_time>
+    <writable>1</writable>
+    <in_use>0</in_use>
+    <permissions>
+      <permission>
+        <name>Everything</name>
+      </permission>
+    </permissions>
+    <user_tags>
+      <count>0</count>
+    </user_tags>
+    <alterable>0</alterable>
+    <config id="daba56c8-73ec-11df-a475-002264764cea">
+      <name>Full and fast</name>
+      <type>0</type>
+      <trash>0</trash>
+    </config>
+    <target id="2225c572-a669-47a5-8173-1e95fc670f60">
+      <name>shellshock</name>
+      <trash>0</trash>
+    </target>
+    <hosts_ordering>sequential</hosts_ordering>
+    <scanner id="08b69003-5fc2-4037-a479-93b440211c73">
+      <name>OpenVAS Default</name>
+      <type>2</type>
+      <trash>0</trash>
+    </scanner>
+    <status>Done</status>
+    <progress>-1</progress>
+    <report_count>2<finished>2</finished></report_count>
+    <trend>same</trend>
+    <schedule id="">
+      <name/>
+      <next_time>over</next_time>
+      <trash>0</trash>
+    </schedule>
+    <schedule_periods>0</schedule_periods>
+    <first_report>
+      <report id="74ee3645-e81d-481d-996d-7b6360c87518">
+        <timestamp>2017-12-11T16:40:21Z</timestamp>
+        <scan_start>2017-12-11T16:40:32Z</scan_start>
+        <scan_end>2017-12-11T16:49:09Z</scan_end>
+        <result_count>
+          <debug>0</debug>
+          <hole>0</hole>
+          <info>2</info>
+          <log>38</log>
+          <warning>2</warning>
+          <false_positive>0</false_positive>
+        </result_count>
+        <severity>5.0</severity>
+      </report>
+    </first_report>
+    <last_report>
+      <report id="46203d29-ba11-4171-81ef-83d227063c7d">
+        <timestamp>2017-12-12T08:13:34Z</timestamp>
+        <scan_start>2017-12-12T08:13:43Z</scan_start>
+        <scan_end>2017-12-12T08:21:05Z</scan_end>
+        <result_count>
+          <debug>0</debug>
+          <hole>0</hole>
+          <info>2</info>
+          <log>38</log>
+          <warning>2</warning>
+          <false_positive>0</false_positive>
+        </result_count>
+        <severity>5.0</severity>
+      </report>
+    </last_report>
+    <second_last_report>
+      <report id="74ee3645-e81d-481d-996d-7b6360c87518">
+        <timestamp>2017-12-11T16:40:21Z</timestamp>
+        <scan_start>2017-12-11T16:40:32Z</scan_start>
+        <scan_end>2017-12-11T16:49:09Z</scan_end>
+        <result_count>
+          <debug>0</debug>
+          <hole>0</hole>
+          <info>2</info>
+          <log>38</log>
+          <warning>2</warning>
+          <false_positive>0</false_positive>
+        </result_count>
+        <severity>5.0</severity>
+      </report>
+    </second_last_report>
+    <observers/>
+    <result_count>84</result_count>
+    <preferences>
+      <preference>
+        <name>Maximum concurrently executed NVTs per host</name>
+        <scanner_name>max_checks</scanner_name>
+        <value>4</value>
+      </preference>
+      <preference>
+        <name>Maximum concurrently scanned hosts</name>
+        <scanner_name>max_hosts</scanner_name>
+        <value>20</value>
+      </preference>
+      <preference>
+        <name>Network Source Interface</name>
+        <scanner_name>source_iface</scanner_name>
+        <value/>
+      </preference>
+      <preference>
+        <name>Add results to Asset Management</name>
+        <scanner_name>in_assets</scanner_name>
+        <value>yes</value>
+      </preference>
+      <preference>
+        <name>Apply Overrides when adding Assets</name>
+        <scanner_name>assets_apply_overrides</scanner_name>
+        <value>yes</value>
+      </preference>
+      <preference>
+        <name>Min QOD when adding Assets</name>
+        <scanner_name>assets_min_qod</scanner_name>
+        <value>70</value>
+      </preference>
+      <preference>
+        <name>Auto Delete Reports</name>
+        <scanner_name>auto_delete</scanner_name>
+        <value>no</value>
+      </preference>
+      <preference>
+        <name>Auto Delete Reports Data</name>
+        <scanner_name>auto_delete_data</scanner_name>
+        <value>5</value>
+      </preference>
+    </preferences>
+  </task>
+  <task id="22e6530d-2516-4e01-aad3-e357f1b1a2bb">
+    <owner>
+      <name>admin</name>
+    </owner>
+    <name>test</name>
+    <comment/>
+    <creation_time>2017-12-12T08:14:36Z</creation_time>
+    <modification_time>2017-12-12T08:14:45Z</modification_time>
+    <writable>1</writable>
+    <in_use>0</in_use>
+    <permissions>
+      <permission>
+        <name>Everything</name>
+      </permission>
+    </permissions>
+    <user_tags>
+      <count>0</count>
+    </user_tags>
+    <alterable>0</alterable>
+    <config id="2d3f051c-55ba-11e3-bf43-406186ea4fc5">
+      <name>Host Discovery</name>
+      <type>0</type>
+      <trash>0</trash>
+    </config>
+    <target id="2225c572-a669-47a5-8173-1e95fc670f60">
+      <name>shellshock</name>
+      <trash>0</trash>
+    </target>
+    <hosts_ordering>sequential</hosts_ordering>
+    <scanner id="08b69003-5fc2-4037-a479-93b440211c73">
+      <name>OpenVAS Default</name>
+      <type>2</type>
+      <trash>0</trash>
+    </scanner>
+    <status>Done</status>
+    <progress>-1</progress>
+    <report_count>1<finished>1</finished></report_count>
+    <trend/>
+    <schedule id="">
+      <name/>
+      <next_time>over</next_time>
+      <trash>0</trash>
+    </schedule>
+    <schedule_periods>0</schedule_periods>
+    <first_report>
+      <report id="7a537c8d-a721-410b-9929-db22f46c7099">
+        <timestamp>2017-12-12T08:14:44Z</timestamp>
+        <scan_start>2017-12-12T08:14:44Z</scan_start>
+        <scan_end>2017-12-12T08:14:52Z</scan_end>
+        <result_count>
+          <debug>0</debug>
+          <hole>0</hole>
+          <info>0</info>
+          <log>1</log>
+          <warning>0</warning>
+          <false_positive>0</false_positive>
+        </result_count>
+        <severity>0.0</severity>
+      </report>
+    </first_report>
+    <last_report>
+      <report id="7a537c8d-a721-410b-9929-db22f46c7099">
+        <timestamp>2017-12-12T08:14:44Z</timestamp>
+        <scan_start>2017-12-12T08:14:44Z</scan_start>
+        <scan_end>2017-12-12T08:14:52Z</scan_end>
+        <result_count>
+          <debug>0</debug>
+          <hole>0</hole>
+          <info>0</info>
+          <log>1</log>
+          <warning>0</warning>
+          <false_positive>0</false_positive>
+        </result_count>
+        <severity>0.0</severity>
+      </report>
+    </last_report>
+    <observers/>
+    <result_count>1</result_count>
+    <preferences>
+      <preference>
+        <name>Maximum concurrently executed NVTs per host</name>
+        <scanner_name>max_checks</scanner_name>
+        <value>4</value>
+      </preference>
+      <preference>
+        <name>Maximum concurrently scanned hosts</name>
+        <scanner_name>max_hosts</scanner_name>
+        <value>20</value>
+      </preference>
+      <preference>
+        <name>Network Source Interface</name>
+        <scanner_name>source_iface</scanner_name>
+        <value/>
+      </preference>
+      <preference>
+        <name>Add results to Asset Management</name>
+        <scanner_name>in_assets</scanner_name>
+        <value>yes</value>
+      </preference>
+      <preference>
+        <name>Apply Overrides when adding Assets</name>
+        <scanner_name>assets_apply_overrides</scanner_name>
+        <value>yes</value>
+      </preference>
+      <preference>
+        <name>Min QOD when adding Assets</name>
+        <scanner_name>assets_min_qod</scanner_name>
+        <value>70</value>
+      </preference>
+      <preference>
+        <name>Auto Delete Reports</name>
+        <scanner_name>auto_delete</scanner_name>
+        <value>no</value>
+      </preference>
+      <preference>
+        <name>Auto Delete Reports Data</name>
+        <scanner_name>auto_delete_data</scanner_name>
+        <value>5</value>
+      </preference>
+    </preferences>
+  </task>
+  <filters id="">
+    <term>apply_overrides=0 min_qod=70 first=1 rows=10 sort=name</term>
+    <keywords>
+      <keyword>
+        <column>apply_overrides</column>
+        <relation>=</relation>
+        <value>0</value>
+      </keyword>
+      <keyword>
+        <column>min_qod</column>
+        <relation>=</relation>
+        <value>70</value>
+      </keyword>
+      <keyword>
+        <column>first</column>
+        <relation>=</relation>
+        <value>1</value>
+      </keyword>
+      <keyword>
+        <column>rows</column>
+        <relation>=</relation>
+        <value>10</value>
+      </keyword>
+      <keyword>
+        <column>sort</column>
+        <relation>=</relation>
+        <value>name</value>
+      </keyword>
+    </keywords>
+  </filters>
+  <sort>
+    <field>name<order>ascending</order></field>
+  </sort>
+  <tasks start="1" max="1000"/>
+  <task_count>2<filtered>2</filtered><page>2</page></task_count>
+</get_tasks_response>

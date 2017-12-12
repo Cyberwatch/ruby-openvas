@@ -8,6 +8,9 @@ module Openvas
 
     # Do Login
     def self.login
+      raise InvalidLogin, 'Please configure the username' unless Openvas::Config.username
+      raise InvalidLogin, 'Please configure the password' unless Openvas::Config.password
+
       content = Nokogiri::XML::Builder.new do |xml|
         xml.authenticate do
           xml.credentials do
