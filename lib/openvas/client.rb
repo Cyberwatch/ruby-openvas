@@ -15,9 +15,7 @@ module Openvas
     # Connect the websocket
     def self.connect
       # Retrieve URI
-      unless Openvas::Config.url
-        raise InvalidUrlConfigError, 'Please Configure the client before'
-      end
+      raise InvalidUrlConfigError, 'Please Configure the client before' unless Openvas::Config.url
 
       uri = URI.parse(Openvas::Config.url)
 
@@ -45,9 +43,7 @@ module Openvas
     def self.query(data)
       res = Nokogiri::XML(send_receive(data.to_xml))
 
-      unless res.at_xpath('//@status')&.value == '200'
-        raise QueryError 'Unknown query error'
-      end
+      raise QueryError 'Unknown query error' unless res.at_xpath('//@status')&.value == '200'
 
       res
     end

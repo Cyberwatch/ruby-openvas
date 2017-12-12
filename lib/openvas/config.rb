@@ -3,7 +3,7 @@
 module Openvas
   module Config
     class RequiredOptionMissing < RuntimeError; end
-    extend self
+    module_function
 
     attr_accessor :url, :username, :password, :socket
   end

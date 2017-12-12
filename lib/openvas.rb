@@ -11,7 +11,7 @@ require 'openvas/reports'
 require 'openvas/results'
 
 module Openvas
-  extend self
+  module_function
 
   def configure
     block_given? ? yield(Config) : Config
