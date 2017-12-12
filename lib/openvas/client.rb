@@ -52,27 +52,30 @@ module Openvas
       res
     end
 
-    private
+    # Private class methods
+    class << self
+      private
 
-    # send_receive data
-    def self.send_receive(send)
-      socket.syswrite(send)
+      # send_receive data
+      def send_receive(send)
+        socket.syswrite(send)
 
-      buffer = ''
-      loop do
-        last_part = socket.sysread(BLOCK_SIZE)
-        buffer += last_part
-        break if last_part.size < BLOCK_SIZE
+        buffer = ''
+        loop do
+          last_part = socket.sysread(BLOCK_SIZE)
+          buffer += last_part
+          break if last_part.size < BLOCK_SIZE
+        end
+        buffer
       end
-      buffer
-    end
 
-    def self.socket
-      Openvas::Config.socket
-    end
+      def socket
+        Openvas::Config.socket
+      end
 
-    def self.socket=(socket)
-      Openvas::Config.socket = socket
+      def socket=(socket)
+        Openvas::Config.socket = socket
+      end
     end
   end
 end
