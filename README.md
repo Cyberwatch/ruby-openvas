@@ -44,7 +44,7 @@ Openvas::Auth.login
 
 - Retrive all scans and list the results
 
-```
+```ruby
 Openvas::Scans.all.each do |scan|
   puts 'Scan Name : ' + scan.name
   puts '-'*40
