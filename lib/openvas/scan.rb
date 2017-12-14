@@ -3,21 +3,8 @@
 require 'time'
 
 module Openvas
-  class Scans < Client
-    def self.all
-      query = Nokogiri::XML::Builder.new { get_tasks }
-      query(query).xpath('//get_tasks_response/task').map do |scan|
-        Openvas::Scan.new(scan)
-      end
-    end
-
-    def self.find_by_id(id)
-      query = Nokogiri::XML::Builder.new { get_tasks(task_id: id) }
-      Openvas::Scan.new(query(query).at_xpath('//get_tasks_response/task'))
-    end
-  end
-
-  class Scan
+  # Class used to interact with OpenVAS' scans
+  class Scan < Client
     attr_accessor :id, :name, :comment, :status, :target, :user, :created_at, :updated_at
 
     def initialize(scan)
@@ -44,9 +31,22 @@ module Openvas
     end
 
     def finished?
-      return true if @status.eql? 'Done'
+      @status == 'Done'
+    end
 
-      false
+    class << self
+      def all
+        data = Nokogiri::XML::Builder.new { get_tasks }
+
+        query(data).xpath('//get_tasks_response/task').map do |scan|
+          new(scan)
+        end
+      end
+
+      def find_by_id(id)
+        data = Nokogiri::XML::Builder.new { get_tasks(task_id: id) }
+        new(query(data).at_xpath('//get_tasks_response/task'))
+      end
     end
   end
 end
