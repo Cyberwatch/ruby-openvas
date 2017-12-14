@@ -8,7 +8,7 @@ require 'openvas/auth'
 
 require 'openvas/scan'
 require 'openvas/reports'
-require 'openvas/results'
+require 'openvas/result'
 
 module Openvas
   extend self
