@@ -31,7 +31,7 @@ module Openvas
     end
 
     def results
-      Openvas::Results.find_by_report_id(@id)
+      Openvas::Result.find_by_report_id(@id)
     end
   end
 end

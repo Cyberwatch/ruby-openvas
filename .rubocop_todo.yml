@@ -21,8 +21,6 @@ Style/Documentation:
     - 'lib/openvas/client.rb'
     - 'lib/openvas/config.rb'
     - 'lib/openvas/reports.rb'
-    - 'lib/openvas/results.rb'
-    - 'lib/openvas/scans.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.

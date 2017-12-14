@@ -27,7 +27,7 @@ module Openvas
     end
 
     def last_results
-      Openvas::Results.find_by_report_id(@last_report_id)
+      Openvas::Result.find_by_report_id(@last_report_id)
     end
 
     def finished?
