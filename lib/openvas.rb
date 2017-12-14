@@ -6,7 +6,7 @@ require 'openvas/config'
 require 'openvas/client'
 require 'openvas/auth'
 
-require 'openvas/scans'
+require 'openvas/scan'
 require 'openvas/reports'
 require 'openvas/results'
 
