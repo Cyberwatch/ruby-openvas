@@ -4,7 +4,7 @@ require 'time'
 
 module Openvas
   # Class used to interact with OpenVAS' scans results
-  class Result
+  class Result < Client
     attr_accessor :id, :name, :comment, :description, :host, :user, :port, :severity, :created_at, :updated_at
 
     def initialize(result)
