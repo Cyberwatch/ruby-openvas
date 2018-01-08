@@ -5,7 +5,7 @@ require 'time'
 module Openvas
   # Class used to interact with OpenVAS' scans results
   class Result < Client
-    attr_accessor :id, :name, :comment, :description, :host, :user, :port, :severity, :created_at, :updated_at
+    attr_accessor :id, :name, :comment, :description, :host, :user, :port, :severity, :cves, :created_at, :updated_at
 
     def initialize(result)
       @id = result.at_xpath('@id').value
@@ -16,6 +16,7 @@ module Openvas
       @port = result.at_xpath('port').text
       @severity = result.at_xpath('severity').text
       @description = result.at_xpath('description').text
+      @cves = result.at_xpath('nvt').at_xpath('cve').text.split(',').map(&:strip)
 
       @created_at = Time.parse(result.at_xpath('creation_time').text)
       @updated_at = Time.parse(result.at_xpath('modification_time').text)
