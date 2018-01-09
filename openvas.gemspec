@@ -7,9 +7,8 @@ require 'openvas/version'
 Gem::Specification.new do |s|
   s.name        = 'openvas'
   s.version     = Openvas::VERSION
-  s.date        = '2017-12-25'
   s.summary     = 'Openvas API Client (OMP 7.0)'
-  s.description = 'Easily interface with the Openvas for consuming results'
+  s.description = 'Easily interface with the Openvas API OMP 7.0'
   s.authors     = ['Florian Wininger']
   s.email       = 'fw.centrale@gmail.com'
   s.homepage    = 'https://github.com/Cyberwatch/ruby-openvas'
