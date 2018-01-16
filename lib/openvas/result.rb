@@ -38,7 +38,7 @@ module Openvas
         end
       end
 
-      def find_by_id(id)
+      def find_by(id:)
         query = Nokogiri::XML::Builder.new { get_results(result_id: id) }
         new(query(query).at_xpath('//get_results_response/result'))
       end
