@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Openvas::Scan do
-  let(:scan) { Openvas::Scan.find_by_id('96625625-8e22-4b1c-9c65-4ddf80f78d20') }
+  let(:scan) { Openvas::Scan.find_by(id: '96625625-8e22-4b1c-9c65-4ddf80f78d20') }
 
   describe '.all' do
     before { allow(Openvas::Scan).to receive(:query).and_return(fixture_xml('openvas/scans/all.xml')) }
@@ -13,7 +13,7 @@ describe Openvas::Scan do
     end
   end
 
-  describe '.find_by_id' do
+  describe '.find_by' do
     before { allow(Openvas::Scan).to receive(:query).and_return(fixture_xml('openvas/scans/find_by_id.xml')) }
 
     it 'returns an Openvas::Scan object' do
