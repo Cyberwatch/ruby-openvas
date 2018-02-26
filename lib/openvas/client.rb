@@ -43,7 +43,7 @@ module Openvas
     def self.query(data)
       res = Nokogiri::XML(send_receive(data.to_xml))
 
-      raise QueryError 'Unknown query error' unless res.at_xpath('//@status')&.value == '200'
+      raise QueryError, 'Unknown query error' unless res.at_xpath('//@status')&.value == '200'
 
       res
     end
