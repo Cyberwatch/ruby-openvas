@@ -6,33 +6,40 @@ require 'openssl'
 
 module Openvas
   class Client
-    class InvalidUrlConfigError < StandardError; end
-    class QueryError < StandardError; end
-
     # buffer size for socket
     BLOCK_SIZE = 1024 * 16
 
     # Connect the websocket
     def self.connect
       # Retrieve URI
-      raise InvalidUrlConfigError, 'Please Configure the client before' unless Openvas::Config.url
+      raise ConfigError, 'URL not configured' unless Openvas::Config.url
 
-      uri = URI.parse(Openvas::Config.url)
+      begin
+        uri = URI.parse(Openvas::Config.url)
 
-      plain_socket = TCPSocket.open(uri.host, uri.port)
-      self.socket = OpenSSL::SSL::SSLSocket.new(plain_socket, OpenSSL::SSL::SSLContext.new)
+        plain_socket = TCPSocket.open(uri.host, uri.port)
+        self.socket = OpenSSL::SSL::SSLSocket.new(plain_socket, OpenSSL::SSL::SSLContext.new)
 
-      # Enable to close socket and SSL layer together
-      socket.sync_close = true
-      socket.connect
+        # Enable to close socket and SSL layer together
+        socket.sync_close = true
+        socket.connect
+      rescue Errno::ECONNREFUSED, OpenSSL::SSL::SSLError, SocketError,
+             URI::InvalidURIErro => e
+        raise ConnectionError, e
+      end
 
       true
     end
 
     def self.disconnect
       return unless socket
-      socket.close
-      self.socket = nil
+
+      begin
+        socket.close
+        self.socket = nil
+      rescue SocketError => e
+        raise ConnectionError, e
+      end
     end
 
     def self.version

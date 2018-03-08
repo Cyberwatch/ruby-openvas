@@ -20,12 +20,12 @@ describe Openvas::Auth do
 
     it 'without username' do
       Openvas::Config.username = nil
-      expect { Openvas::Auth.login }.to raise_exception(Openvas::Auth::InvalidLogin)
+      expect { Openvas::Auth.login }.to raise_exception(Openvas::ConfigError)
     end
 
     it 'without password' do
       Openvas::Config.password = nil
-      expect { Openvas::Auth.login }.to raise_exception(Openvas::Auth::InvalidLogin)
+      expect { Openvas::Auth.login }.to raise_exception(Openvas::ConfigError)
     end
   end
 end

@@ -4,12 +4,10 @@ require 'nokogiri'
 
 module Openvas
   class Auth < Client
-    class InvalidLogin < StandardError; end
-
     # Do Login
     def self.login
-      raise InvalidLogin, 'Please configure the username' unless Openvas::Config.username
-      raise InvalidLogin, 'Please configure the password' unless Openvas::Config.password
+      raise ConfigError, 'Username not configured' unless Openvas::Config.username
+      raise ConfigError, 'Password not configured' unless Openvas::Config.password
 
       content = Nokogiri::XML::Builder.new do |xml|
         xml.authenticate do
@@ -20,7 +18,11 @@ module Openvas
         end
       end
 
-      query(content)
+      begin
+        query(content)
+      rescue QueryError
+        raise AuthError, 'Invalid login or password'
+      end
 
       true
     end
