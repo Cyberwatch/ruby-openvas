@@ -5,14 +5,14 @@ require 'time'
 module Openvas
   # Class used to interact with OpenVAS' scans
   class Scan < Client
-    attr_accessor :id, :name, :comment, :status, :target, :user, :created_at, :updated_at
+    attr_accessor :id, :name, :comment, :status, :target, :user, :created_at, :updated_at, :trend
 
     def initialize(scan)
       @id = scan.at_xpath('@id').value
       @name = scan.at_xpath('name').text
       @comment = scan.at_xpath('comment').text
       @user = scan.at_xpath('owner/name').text
-
+      @trend = scan.at_xpath('trend').text
       @status = scan.at_xpath('status').text
       @target = scan.at_xpath('target')&.first_element_child&.text
 
