@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    openvas (1.0.3)
+    openvas (1.0.4)
       nokogiri (~> 1.8)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.3.0)
+    ast (2.4.0)
     coveralls (0.8.21)
       json (>= 1.8, < 3)
       simplecov (~> 0.14.1)
@@ -18,11 +18,11 @@ GEM
     docile (1.1.5)
     json (2.1.0)
     mini_portile2 (2.3.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
-    parser (2.4.0.2)
-      ast (~> 2.3)
+    parser (2.5.0.3)
+      ast (~> 2.4.0)
     powerpack (0.1.1)
     rainbow (3.0.0)
     rake (12.3.0)
@@ -38,10 +38,10 @@ GEM
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
-    rspec-support (3.7.0)
-    rubocop (0.52.1)
+    rspec-support (3.7.1)
+    rubocop (0.53.0)
       parallel (~> 1.10)
-      parser (>= 2.4.0.2, < 3.0)
+      parser (>= 2.5)
       powerpack (~> 0.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
