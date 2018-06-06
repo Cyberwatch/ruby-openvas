@@ -23,7 +23,7 @@ module Openvas
         # Enable to close socket and SSL layer together
         socket.sync_close = true
         socket.connect
-      rescue Errno::ECONNREFUSED, OpenSSL::SSL::SSLError, SocketError,
+      rescue Errno::ECONNREFUSED, Errno::EHOSTUNREACH, OpenSSL::SSL::SSLError, SocketError,
              URI::InvalidURIErro => e
         raise ConnectionError, e
       end
